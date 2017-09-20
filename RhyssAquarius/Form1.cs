@@ -35,5 +35,10 @@ namespace RhyssAquarius
 
 
         }
+
+        private void AquariusCard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

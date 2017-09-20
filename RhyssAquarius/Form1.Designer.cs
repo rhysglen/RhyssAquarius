@@ -38,6 +38,7 @@
             this.ClientSize = new System.Drawing.Size(903, 521);
             this.Name = "AquariusCard";
             this.Text = "Aquarius";
+            this.Load += new System.EventHandler(this.AquariusCard_Load);
             this.Click += new System.EventHandler(this.AquariusCard_Click);
             this.ResumeLayout(false);
 
