@@ -31,9 +31,9 @@ namespace RhyssAquarius
             aquariusPen.Color = Color.Chartreuse;
             aquariusBrush.Color = Color.Chartreuse;
             aquariusCard.DrawRectangle(aquariusPen, 0, 300, 910, 175);
-            aquariusCard.FillRectangle(aquariusBrush, 0, , 910, 175);
+            aquariusCard.FillRectangle(aquariusBrush, 0,300 , 910, 175);
 
-
+            //
         }
 
         private void AquariusCard_Load(object sender, EventArgs e)
