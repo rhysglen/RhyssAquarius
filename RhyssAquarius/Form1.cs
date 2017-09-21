@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace RhyssAquarius
 {
     public partial class AquariusCard : Form
@@ -61,7 +62,8 @@ namespace RhyssAquarius
 
         private void AquariusCard_Load(object sender, EventArgs e)
         {
-
+          
+            
         }
     }
 }
