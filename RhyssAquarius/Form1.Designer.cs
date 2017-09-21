@@ -35,7 +35,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(903, 521);
+            this.BackgroundImage = global::RhyssAquarius.Properties.Resources.aquariusphoto;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(884, 741);
+            this.DoubleBuffered = true;
             this.Name = "AquariusCard";
             this.Text = "Aquarius";
             this.Load += new System.EventHandler(this.AquariusCard_Load);
