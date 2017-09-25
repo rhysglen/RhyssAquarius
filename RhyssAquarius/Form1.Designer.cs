@@ -37,7 +37,7 @@
             this.BackColor = System.Drawing.Color.LemonChiffon;
             this.BackgroundImage = global::RhyssAquarius.Properties.Resources.aquariusphoto;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(884, 741);
+            this.ClientSize = new System.Drawing.Size(934, 733);
             this.DoubleBuffered = true;
             this.Name = "AquariusCard";
             this.Text = "Aquarius";

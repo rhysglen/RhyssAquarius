@@ -33,25 +33,26 @@ namespace RhyssAquarius
             SolidBrush aquariusBrush = new SolidBrush(Color.DodgerBlue);
             Font aquariusFont = new Font("Papyrus", 70, FontStyle.Bold);
             SolidBrush aquariusWord = new SolidBrush(Color.Black);
-            Pen starPen = new Pen(Color.Yellow, 10);
+            Pen starPen = new Pen(Color.Yellow, 5);
             SolidBrush starBrush = new SolidBrush(Color.Yellow);
+            Pen linePen = new Pen(Color.MidnightBlue, 3);
 
             //the colours of aquarius
-            aquariusCard.DrawRectangle(aquariusPen, 0, 0, 910, 250);
-            aquariusCard.FillRectangle(aquariusBrush, 0, 0, 910, 250);
+            aquariusCard.DrawRectangle(aquariusPen, 0, 0, 950, 250);
+            aquariusCard.FillRectangle(aquariusBrush, 0, 0, 950, 250);
             aquariusPen.Color = Color.Gray;
             aquariusBrush.Color = Color.Gray;
-            aquariusCard.DrawRectangle(aquariusPen, 0, 250, 910, 250);
-            aquariusCard.FillRectangle(aquariusBrush, 0, 250, 910, 250);
+            aquariusCard.DrawRectangle(aquariusPen, 0, 250, 950, 250);
+            aquariusCard.FillRectangle(aquariusBrush, 0, 250, 950, 250);
             aquariusPen.Color = Color.Chartreuse;
             aquariusBrush.Color = Color.Chartreuse;
-            aquariusCard.DrawRectangle(aquariusPen, 0, 500, 910, 250);
-            aquariusCard.FillRectangle(aquariusBrush, 0,500 , 910, 250);
+            aquariusCard.DrawRectangle(aquariusPen, 0, 500, 950, 250);
+            aquariusCard.FillRectangle(aquariusBrush, 0,500 , 950, 250);
             aquariusPen.Color = Color.Black;
-            aquariusCard.DrawLine(aquariusPen, 0, 15, 910, 15);
-            aquariusCard.DrawLine(aquariusPen, 0, 725, 910, 725);
-            aquariusCard.DrawLine(aquariusPen, 0, 250, 910, 250);
-            aquariusCard.DrawLine(aquariusPen, 0, 500, 910, 500);
+            aquariusCard.DrawLine(aquariusPen, 0, 15, 950, 15);
+            aquariusCard.DrawLine(aquariusPen, 0, 725, 950, 725);
+            aquariusCard.DrawLine(aquariusPen, 0, 250, 950, 250);
+            aquariusCard.DrawLine(aquariusPen, 0, 500, 950, 500);
 
             // Tite of the constellation 
             aquariusCard.DrawString("Aquarius", aquariusFont, aquariusWord, 210, 55);
@@ -67,14 +68,46 @@ namespace RhyssAquarius
             Thread.Sleep(50);
             aquariusCard.Clear(Color.Black);
 
-            //Inside the card
-            aquariusCard.DrawEllipse(starPen, 100, 300, 30, 30);
-            aquariusCard.FillEllipse(starBrush, 100, 300, 30, 30);
-            aquariusCard.DrawEllipse(starPen, 400, 200, 10, 10);
-            aquariusCard.FillEllipse(starBrush, 400, 200, 10, 10);
-            aquariusCard.DrawEllipse(starPen, 430, 190, 20, 20);
-            aquariusCard.FillEllipse(starBrush, 430, 190, 20, 20);
+            //connect the dots
+            aquariusCard.DrawLine(linePen, 105, 200, 170, 250);
+            aquariusCard.DrawLine(linePen, 170, 250, 195, 350);
+            aquariusCard.DrawLine(linePen, 195, 350, 175, 390);
+            aquariusCard.DrawLine(linePen, 175, 390, 115, 520);
+            aquariusCard.DrawLine(linePen, 105,200, 375, 75);
+            aquariusCard.DrawLine(linePen, 375, 75, 405, 65);
+            aquariusCard.DrawLine(linePen, 405, 65, 455, 105);
+            aquariusCard.DrawLine(linePen, 455, 105, 500, 75);
+            aquariusCard.DrawLine(linePen, 500, 75, 470, 275);
+            aquariusCard.DrawLine(linePen, , 200, 375, 75);
+            //the Stars
+            aquariusCard.DrawEllipse(starPen, 100, 200, 25, 25);
+            aquariusCard.FillEllipse(starBrush, 100, 200, 25, 25);
+            aquariusCard.DrawEllipse(starPen, 170, 250, 5, 5);
+            aquariusCard.FillEllipse(starBrush, 170, 250, 5, 5);
+            aquariusCard.DrawEllipse(starPen, 195, 350, 10, 10);
+            aquariusCard.FillEllipse(starBrush, 195, 350, 10, 10);
+            aquariusCard.DrawEllipse(starPen, 175, 390, 5, 5);
+            aquariusCard.FillEllipse(starBrush, 175, 390, 5, 5);
+            aquariusCard.DrawEllipse(starPen, 115, 520, 5, 5);
+            aquariusCard.FillEllipse(starBrush, 115, 520, 5, 5);
+            aquariusCard.DrawEllipse(starPen, 375, 75, 5, 5);
+            aquariusCard.FillEllipse(starBrush, 375, 75, 5, 5);
+            aquariusCard.DrawEllipse(starPen, 405, 65, 10, 10);
+            aquariusCard.FillEllipse(starBrush, 405, 65, 10, 10);
+            aquariusCard.DrawEllipse(starPen, 455, 105, 5, 5);
+            aquariusCard.FillEllipse(starBrush, 455, 105, 5, 5);
+            aquariusCard.DrawEllipse(starPen, 500, 75, 7, 7);
+            aquariusCard.FillEllipse(starBrush, 500, 75, 7, 7);
+            aquariusCard.DrawEllipse(starPen, 470, 275, 7, 7);
+            aquariusCard.FillEllipse(starBrush, 470, 275, 7, 7);
+            aquariusCard.DrawEllipse(starPen, 500, 375, 7, 7);
+            aquariusCard.FillEllipse(starBrush, 500, 375, 7, 7);
+            aquariusCard.DrawEllipse(starPen, 610, 210, 10, 10);
+            aquariusCard.FillEllipse(starBrush, 610, 210, 10, 10);
+            aquariusCard.DrawEllipse(starPen, 800, 280, 10, 10);
+            aquariusCard.FillEllipse(starBrush, 800, 280, 10, 10);
 
+            
         }
 
         private void AquariusCard_Load(object sender, EventArgs e)
