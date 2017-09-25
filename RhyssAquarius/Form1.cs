@@ -211,6 +211,7 @@ namespace RhyssAquarius
             starPen.Color = Color.Yellow;
             starBrush.Color = Color.Yellow;
 
+
         }
 
         private void AquariusCard_Load(object sender, EventArgs e)
