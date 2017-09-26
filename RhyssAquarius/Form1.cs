@@ -18,17 +18,17 @@ namespace RhyssAquarius
         {
             InitializeComponent();
         }
-        //Rhyss Glenfield September 20, 2017
+        //Rhyss Glenfield September 20, 2017, "star day" card based off the aquarius constellation
         private void AquariusCard_Click(object sender, EventArgs e)
-        {// photo
-
+        {
+            // photo
             BackgroundImage = null;
             Refresh();
 
             //graphics object
             Graphics aquariusCard = this.CreateGraphics();
 
-            //pens and brushes and fonts
+            //pens,brushes,fonts,soundplayer
             Pen aquariusPen = new Pen(Color.DodgerBlue, 30);
             SolidBrush aquariusBrush = new SolidBrush(Color.DodgerBlue);
             Font aquariusFont = new Font("Papyrus", 70, FontStyle.Bold);
@@ -36,8 +36,14 @@ namespace RhyssAquarius
             Pen starPen = new Pen(Color.Yellow, 5);
             SolidBrush starBrush = new SolidBrush(Color.Yellow);
             Pen linePen = new Pen(Color.MediumBlue, 3);
+            Font rhyssFont = new Font("Pristina", 25, FontStyle.Regular);
+            SolidBrush rhyssWord = new SolidBrush(Color.Black);
+            Font cardFont = new Font("century", 15, FontStyle.Regular);
+            SolidBrush cardBrush = new SolidBrush(Color.DodgerBlue);
+            SoundPlayer waterPlayer = new SoundPlayer(Properties.Resources.Water);
+            SoundPlayer bellPlayer = new SoundPlayer(Properties.Resources.Bell);
 
-            //the colours of aquarius
+            //the colours of aquarius/front face of card
             aquariusCard.DrawRectangle(aquariusPen, 0, 0, 950, 250);
             aquariusCard.FillRectangle(aquariusBrush, 0, 0, 950, 250);
             aquariusPen.Color = Color.Gray;
@@ -55,17 +61,14 @@ namespace RhyssAquarius
             aquariusCard.DrawLine(aquariusPen, 0, 500, 950, 500);
 
             // Tite of the constellation 
-            aquariusCard.DrawString("Aquarius", aquariusFont, aquariusWord, 210, 55);
+            aquariusCard.DrawString("Happy Star Day", aquariusFont, aquariusWord, 70, 55);
 
             // My name
-            Font rhyssFont = new Font("Pristina", 25, FontStyle.Regular);
-            SolidBrush rhyssWord = new SolidBrush(Color.Black);
             aquariusCard.DrawString("Rhyss Glenfield", rhyssFont, rhyssWord, 50, 550);
-            aquariusCard.DrawString("September 26, 2017", rhyssFont, rhyssWord, 50, 600);
+            aquariusCard.DrawString("September 27, 2017", rhyssFont, rhyssWord, 50, 600);
 
-            //pausing
-            
-            Thread.Sleep(50);
+            //pausing and clearing the screen
+            Thread.Sleep(5000);
             aquariusCard.Clear(Color.Black);
 
             //connect the dots
@@ -118,98 +121,170 @@ namespace RhyssAquarius
             Thread.Sleep(300);
             linePen.Color = Color.MediumBlue;
 
-            //the Stars
-            aquariusCard.DrawEllipse(starPen, 455, 105, 5, 5);
-            aquariusCard.FillEllipse(starBrush, 455, 105, 5, 5);
+            //the Stars appearing and rushing water
+            waterPlayer.Play();
+            aquariusCard.DrawEllipse(starPen, 452, 103, 5, 5);
+            aquariusCard.FillEllipse(starBrush, 452, 103, 5, 5);
             starPen.Color = Color.Black;
             starBrush.Color = Color.Black;
             Thread.Sleep(200);
             starPen.Color = Color.Yellow;
             starBrush.Color = Color.Yellow;
-            aquariusCard.DrawEllipse(starPen, 500, 375, 7, 7);
-            aquariusCard.FillEllipse(starBrush, 500, 375, 7, 7);
+            aquariusCard.DrawEllipse(starPen, 496, 372, 7, 7);
+            aquariusCard.FillEllipse(starBrush, 496, 372, 7, 7);
+            starPen.Color = Color.Black;
+            starBrush.Color = Color.Black;
+            Thread.Sleep(300);
+            starPen.Color = Color.Yellow;
+            starBrush.Color = Color.Yellow;
+            aquariusCard.DrawEllipse(starPen, 168, 250, 5, 5);
+            aquariusCard.FillEllipse(starBrush, 168, 250, 5, 5);
+            starPen.Color = Color.Black;
+            starBrush.Color = Color.Black;
+            Thread.Sleep(250);
+            starPen.Color = Color.Yellow;
+            starBrush.Color = Color.Yellow;
+            aquariusCard.DrawEllipse(starPen, 191, 348, 10, 10);
+            aquariusCard.FillEllipse(starBrush, 191, 348, 10, 10);
+            starPen.Color = Color.Black;
+            starBrush.Color = Color.Black;
+            Thread.Sleep(100);
+            starPen.Color = Color.Yellow;
+            starBrush.Color = Color.Yellow;
+            aquariusCard.DrawEllipse(starPen, 800, 278, 10, 10);
+            aquariusCard.FillEllipse(starBrush, 800, 278, 10, 10);
+            starPen.Color = Color.Black;
+            starBrush.Color = Color.Black;
+            Thread.Sleep(90);
+            starPen.Color = Color.Yellow;
+            starBrush.Color = Color.Yellow;
+            aquariusCard.DrawEllipse(starPen, 112, 520, 5, 5);
+            aquariusCard.FillEllipse(starBrush, 112, 520, 5, 5);
             starPen.Color = Color.Black;
             starBrush.Color = Color.Black;
             Thread.Sleep(200);
             starPen.Color = Color.Yellow;
             starBrush.Color = Color.Yellow;
-            aquariusCard.DrawEllipse(starPen, 170, 250, 5, 5);
-            aquariusCard.FillEllipse(starBrush, 170, 250, 5, 5);
+            aquariusCard.DrawEllipse(starPen, 373, 75, 5, 5);
+            aquariusCard.FillEllipse(starBrush, 373, 75, 5, 5);
             starPen.Color = Color.Black;
             starBrush.Color = Color.Black;
-            Thread.Sleep(200);
+            Thread.Sleep(170);
             starPen.Color = Color.Yellow;
             starBrush.Color = Color.Yellow;
-            aquariusCard.DrawEllipse(starPen, 195, 350, 10, 10);
-            aquariusCard.FillEllipse(starBrush, 195, 350, 10, 10);
+            aquariusCard.DrawEllipse(starPen, 402, 62, 10, 10);
+            aquariusCard.FillEllipse(starBrush, 402, 62, 10, 10);
             starPen.Color = Color.Black;
             starBrush.Color = Color.Black;
-            Thread.Sleep(200);
+            Thread.Sleep(210);
             starPen.Color = Color.Yellow;
             starBrush.Color = Color.Yellow;
-            aquariusCard.DrawEllipse(starPen, 800, 280, 10, 10);
-            aquariusCard.FillEllipse(starBrush, 800, 280, 10, 10);
+            aquariusCard.DrawEllipse(starPen, 100, 190, 25, 25);
+            aquariusCard.FillEllipse(starBrush, 100, 190, 25, 25);
             starPen.Color = Color.Black;
             starBrush.Color = Color.Black;
-            Thread.Sleep(200);
-            starPen.Color = Color.Yellow;
-            starBrush.Color = Color.Yellow;
-            aquariusCard.DrawEllipse(starPen, 115, 520, 5, 5);
-            aquariusCard.FillEllipse(starBrush, 115, 520, 5, 5);
-            starPen.Color = Color.Black;
-            starBrush.Color = Color.Black;
-            Thread.Sleep(200);
-            starPen.Color = Color.Yellow;
-            starBrush.Color = Color.Yellow;
-            aquariusCard.DrawEllipse(starPen, 375, 75, 5, 5);
-            aquariusCard.FillEllipse(starBrush, 375, 75, 5, 5);
-            starPen.Color = Color.Black;
-            starBrush.Color = Color.Black;
-            Thread.Sleep(200);
-            starPen.Color = Color.Yellow;
-            starBrush.Color = Color.Yellow;
-            aquariusCard.DrawEllipse(starPen, 405, 65, 10, 10);
-            aquariusCard.FillEllipse(starBrush, 405, 65, 10, 10);
-            starPen.Color = Color.Black;
-            starBrush.Color = Color.Black;
-            Thread.Sleep(200);
-            starPen.Color = Color.Yellow;
-            starBrush.Color = Color.Yellow;
-            aquariusCard.DrawEllipse(starPen, 100, 200, 25, 25);
-            aquariusCard.FillEllipse(starBrush, 100, 200, 25, 25);
-            starPen.Color = Color.Black;
-            starBrush.Color = Color.Black;
-            Thread.Sleep(200);
+            Thread.Sleep(230);
             starPen.Color = Color.Yellow;
             starBrush.Color = Color.Yellow;     
-            aquariusCard.DrawEllipse(starPen, 175, 390, 5, 5);
-            aquariusCard.FillEllipse(starBrush, 175, 390, 5, 5);
+            aquariusCard.DrawEllipse(starPen, 172, 390, 5, 5);
+            aquariusCard.FillEllipse(starBrush, 172, 390, 5, 5);
             starPen.Color = Color.Black;
             starBrush.Color = Color.Black;
             Thread.Sleep(200);
             starPen.Color = Color.Yellow;
             starBrush.Color = Color.Yellow;
-            aquariusCard.DrawEllipse(starPen, 470, 275, 7, 7);
-            aquariusCard.FillEllipse(starBrush, 470, 275, 7, 7);
+            aquariusCard.DrawEllipse(starPen, 467, 275, 7, 7);
+            aquariusCard.FillEllipse(starBrush, 467, 275, 7, 7);
             starPen.Color = Color.Black;
             starBrush.Color = Color.Black;
-            Thread.Sleep(200);
+            Thread.Sleep(240);
             starPen.Color = Color.Yellow;
             starBrush.Color = Color.Yellow;
-            aquariusCard.DrawEllipse(starPen, 500, 75, 7, 7);
-            aquariusCard.FillEllipse(starBrush, 500, 75, 7, 7);
+            aquariusCard.DrawEllipse(starPen, 497, 75, 7, 7);
+            aquariusCard.FillEllipse(starBrush, 497, 75, 7, 7);
             starPen.Color = Color.Black;
             starBrush.Color = Color.Black;
-            Thread.Sleep(200);
+            Thread.Sleep(150);
             starPen.Color = Color.Yellow;
             starBrush.Color = Color.Yellow;
             aquariusCard.DrawEllipse(starPen, 610, 210, 10, 10);
             aquariusCard.FillEllipse(starBrush, 610, 210, 10, 10);
             starPen.Color = Color.Black;
             starBrush.Color = Color.Black;
-            Thread.Sleep(200);
+            Thread.Sleep(110);
             starPen.Color = Color.Yellow;
             starBrush.Color = Color.Yellow;
+
+            //words and a bell
+            bellPlayer.Play();
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            cardBrush.Color = Color.Gray;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.Chartreuse;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.DodgerBlue;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            cardBrush.Color = Color.Gray;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.Chartreuse;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.DodgerBlue;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.Gray;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.Chartreuse;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.DodgerBlue;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.Gray;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.Chartreuse;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.DodgerBlue;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.Gray;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.Chartreuse;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(300);
+            cardBrush.Color = Color.DodgerBlue;
+            aquariusCard.DrawString("May your life bring you to steady waters,", cardFont, cardBrush, 500, 500);
+            aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
+            Thread.Sleep(450);
+            bellPlayer.Stop();
+
+
+
 
 
         }
