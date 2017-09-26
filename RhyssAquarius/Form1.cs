@@ -118,7 +118,7 @@ namespace RhyssAquarius
             linePen.Color = Color.MediumBlue;
             aquariusCard.DrawLine(linePen, 610, 210, 800, 280);
             linePen.Color = Color.Black;
-            Thread.Sleep(300);
+            Thread.Sleep(300); 
             linePen.Color = Color.MediumBlue;
 
             //the Stars appearing and rushing water
