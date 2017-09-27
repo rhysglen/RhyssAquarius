@@ -87,6 +87,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imageedit_1_5325069017.png" />
+    <None Include="Resources\Water-Lisa_Redfern-1888623835.wav" />
+    <None Include="Resources\Ship_Brass_Bell-Mike_Koenig-1458750630.wav" />
+    <None Include="Resources\Water Drop-SoundBible.com-2039669379.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

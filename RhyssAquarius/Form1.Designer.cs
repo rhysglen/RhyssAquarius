@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AquariusCard));
             this.SuspendLayout();
             // 
             // AquariusCard
@@ -39,9 +40,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(934, 733);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AquariusCard";
             this.Text = "Aquarius";
-            this.Load += new System.EventHandler(this.AquariusCard_Load);
             this.Click += new System.EventHandler(this.AquariusCard_Click);
             this.ResumeLayout(false);
 

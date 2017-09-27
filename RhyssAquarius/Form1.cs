@@ -60,10 +60,10 @@ namespace RhyssAquarius
             aquariusCard.DrawLine(aquariusPen, 0, 250, 950, 250);
             aquariusCard.DrawLine(aquariusPen, 0, 500, 950, 500);
 
-            // Tite of the constellation 
+            // Tite of the card
             aquariusCard.DrawString("Happy Star Day", aquariusFont, aquariusWord, 70, 55);
 
-            // My name
+            // My name and date
             aquariusCard.DrawString("Rhyss Glenfield", rhyssFont, rhyssWord, 50, 550);
             aquariusCard.DrawString("September 27, 2017", rhyssFont, rhyssWord, 50, 600);
 
@@ -289,10 +289,5 @@ namespace RhyssAquarius
 
         }
 
-        private void AquariusCard_Load(object sender, EventArgs e)
-        {
-          
-            
-        }
     }
 }
