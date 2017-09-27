@@ -53,7 +53,7 @@ namespace RhyssAquarius
             aquariusPen.Color = Color.Chartreuse;
             aquariusBrush.Color = Color.Chartreuse;
             aquariusCard.DrawRectangle(aquariusPen, 0, 500, 950, 250);
-            aquariusCard.FillRectangle(aquariusBrush, 0,500 , 950, 250);
+            aquariusCard.FillRectangle(aquariusBrush, 0, 500, 950, 250);
             aquariusPen.Color = Color.Black;
             aquariusCard.DrawLine(aquariusPen, 0, 15, 950, 15);
             aquariusCard.DrawLine(aquariusPen, 0, 725, 950, 725);
@@ -88,7 +88,7 @@ namespace RhyssAquarius
             linePen.Color = Color.Black;
             Thread.Sleep(300);
             linePen.Color = Color.MediumBlue;
-            aquariusCard.DrawLine(linePen, 105,200, 375, 75);
+            aquariusCard.DrawLine(linePen, 105, 200, 375, 75);
             linePen.Color = Color.Black;
             Thread.Sleep(300);
             linePen.Color = Color.MediumBlue;
@@ -118,7 +118,7 @@ namespace RhyssAquarius
             linePen.Color = Color.MediumBlue;
             aquariusCard.DrawLine(linePen, 610, 210, 800, 280);
             linePen.Color = Color.Black;
-            Thread.Sleep(300); 
+            Thread.Sleep(300);
             linePen.Color = Color.MediumBlue;
 
             //the Stars appearing and rushing water
@@ -185,7 +185,7 @@ namespace RhyssAquarius
             starBrush.Color = Color.Black;
             Thread.Sleep(230);
             starPen.Color = Color.Yellow;
-            starBrush.Color = Color.Yellow;     
+            starBrush.Color = Color.Yellow;
             aquariusCard.DrawEllipse(starPen, 172, 390, 5, 5);
             aquariusCard.FillEllipse(starBrush, 172, 390, 5, 5);
             starPen.Color = Color.Black;
@@ -282,12 +282,6 @@ namespace RhyssAquarius
             aquariusCard.DrawString("have a stellar day!", cardFont, cardBrush, 600, 520);
             Thread.Sleep(450);
             bellPlayer.Stop();
-
-
-
-
-
         }
-
     }
 }
